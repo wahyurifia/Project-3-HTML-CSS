@@ -1,1 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/image/clay-banks-u27Rrbs9Dwc-unsplash.jpg);
+    font-family: 'Roboto', 'sans-serif';
+    background-size: cover;
+    min-height: 100vh;
+}
+
+body.active {
+    backdrop-filter: blur(20px) saturate(120%);
+    transition: 3s;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8em;
+    border: none;
+}
+
+.main h1 {
+    font-size: 2em;
+    letter-spacing: 4px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.main .navbar a {
+    text-decoration: none;
+    margin-left: 25px;
+    color: black;
+    font-size: 1.3em;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 10px 19px;
+    transition: .4s;
+
+}
+
+
+.main .navbar a:hover, a.light {
+    background-color: #2F4F4F;
+}
+
+.main #login {
+    padding: 10px 30px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 15px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    text-align: center;
+    background-color: transparent;
+    transform: scale(1);
+    transition: .3s;
+}
+
+.main #login:hover {
+    transform: scale(1.05);
+}
+
+.main #login .icon {
+    position: absolute;
+    right: -80px;
+    bottom: 10px;
+    font-size: 1.2em;
+    color: rgba(0,0,0,.6);
+}
+
+.main #login .icon .fa-github:hover {
+    color: black;
+    transform: scale(1.05);
+}
+
+.main #login .icon .fa-instagram:hover {
+    color: red;
+}
+
+.center {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    width: 100%;
+    transition: 0.09s;
+}
+.center.active {
+    transform: translateX(-32em);
+    height: 80vh;
+    transition: .2s;
+}
+
+.center h1 {
+    font-size: 4em;
+    letter-spacing: 2px;
+}
+
+.center h2 {
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+    transform: scale(0);
+    transition: 0.09s;
+}
+
+.wrapper.active {
+    transform: scale(1);
+    transition: 0.3s
+}
+
+.form-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #041122;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+.form-wrapper span {
+    position: absolute;
+    top: -20px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #041122;
+    padding: 15px 25px;
+    font-size: 1.5em;
+    border-top: 1px solid white;
+    cursor: pointer;
+}
+
+.form-wrapper span:hover {
+    transform: scale(1.1);
+    transition: .3s;
+    transform: translateY(-10px);
+}
+
+form h2 {
+    font-size: 38px;
+    color: #B0C4DE;
+    text-align: left;
+}
+.input-group {
+    position: relative;
+    width: 320px;
+    margin: 30px 0;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 15px;
+    color: #1b6b70;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+    color: #08548f;
+    padding: 0 10px;
+    background: transparent;
+    border: 1px solid #2F4F4F;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: 0;
+    font-size: 12px;
+    background: #041121;
+}
+
+.btn {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, #063d44
+    , #03263c);
+    box-shadow: 0 2px 50px rgba(35, 34, 34, 0.4);
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
